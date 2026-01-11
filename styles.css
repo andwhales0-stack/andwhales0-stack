@@ -1,4 +1,11 @@
-
+:root {
+    --dark: #131921;
+    --primary: #2563eb;
+    --primary-dark: #1e3a8a;
+    --accent: #22c55e;
+    --gray-bg: #f3f4f6;
+    --text: #111827;
+}
 * {
     margin: 0;
     padding: 0;
