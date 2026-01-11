@@ -13,7 +13,7 @@
         <a href="#top" class="logo">AntarJemputAnda</a>
         <nav>
             <a href="#tentang">Tentang</a>
-            <a href="#armada">Armada</a>
+            <a href="#mobil">Mobil</a>
             <a href="#rute">Rute</a>
             <a href="#booking">Booking</a>
             <a href="#kontak">Kontak</a>
@@ -35,20 +35,35 @@
     <h2>Tentang Kami</h2>
     <p>
         AntarJemputAnda menyediakan layanan transportasi profesional
-        untuk perjalanan bandara dan antar kota dengan armada nyaman
+        untuk perjalanan bandara dan antar kota dengan mobil nyaman
         serta pengemudi berpengalaman.
     </p>
 </section>
 
-<section id="armada" class="section gray">
-    <h2>Jenis Layanan & Armada</h2>
+<section id="mobil" class="section gray">
+    <h2>Jenis Layanan & Mobil</h2>
 
     <div class="grid">
-        <div class="card"><h3>Regular</h3></div>
-        <div class="card"><h3>Regular Electric</h3></div>
-        <div class="card"><h3>Regular Plus</h3></div>
-        <div class="card"><h3>Comfort</h3></div>
-        <div class="card"><h3>Comfort Electric</h3></div>
+        <div class="card">
+            <h3>Regular</h3>
+            <p>Calya – Sigra</p>
+        </div>
+        <div class="card">
+            <h3>Regular Electric</h3>
+            <p>Atto 1</p>
+        </div>
+        <div class="card">
+            <h3>Regular Plus</h3>
+            <p>Avanza – Xenia</p>
+        </div>
+        <div class="card">
+            <h3>Comfort</h3>
+            <p>HRV – Fortuner</p>
+        </div>
+        <div class="card">
+            <h3>Comfort Electric</h3>
+            <p>BYD – Aion</p>
+        </div>
     </div>
 </section>
 
@@ -116,14 +131,14 @@
         </div>
 
         <div class="form-group full">
-            <label>Alamat Detail Jemput</label>
+            <label>Alamat Detail Dropoff</label>
             <input type="text" id="address" placeholder="Nama jalan / patokan">
         </div>
 
         <div class="form-group">
-            <label>Jenis Armada</label>
+            <label>Jenis Service</label>
             <select id="armada" required>
-                <option value="">Pilih Armada</option>
+                <option value="">Pilih Service</option>
                 <option>Regular</option>
                 <option>Regular Electric</option>
                 <option>Regular Plus</option>
@@ -152,7 +167,6 @@
     © 2026 AntarJemputAnda
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/628112535678" class="wa-float" aria-label="Chat WhatsApp">💬</a>
 
 <script>
@@ -173,9 +187,9 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
 Nama: ${name.value}
 No. WA: ${phone.value}
 Jemput: ${pickup.value}
-Alamat: ${address.value}
-Tujuan: ${destination.value}
-Armada: ${armada.value}
+Dropoff: ${destination.value}
+Alamat Dropoff: ${address.value}
+Jenis Service: ${armada.value}
 Catatan: ${notes.value}`;
 
     window.open(
