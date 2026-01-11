@@ -8,10 +8,9 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
     <div class="nav-container">
-        <h1 class="logo">AntarJemputAnda</h1>
+        <a href="#top" class="logo">AntarJemputAnda</a>
         <nav>
             <a href="#tentang">Tentang</a>
             <a href="#armada">Armada</a>
@@ -22,95 +21,65 @@
     </div>
 </header>
 
+<div id="top"></div>
+
 <main>
 
-<!-- HERO -->
 <section class="hero">
     <h1>Transportasi Bandara & Antar Kota</h1>
     <p>Nyaman • Tepat Waktu • Profesional</p>
-    <a href="https://wa.me/628xxxxxxxxx" class="btn">
-        Chat via WhatsApp
-    </a>
+    <a href="#booking" class="btn">Booking Sekarang</a>
 </section>
 
-<!-- TENTANG -->
 <section id="tentang" class="section">
     <h2>Tentang Kami</h2>
     <p>
         AntarJemputAnda menyediakan layanan transportasi profesional
-        untuk perjalanan bandara, stasiun, dan antar kota di wilayah
-        Jabodetabek, Bandung, dan Merak dengan armada nyaman serta
-        pengemudi berpengalaman.
+        untuk perjalanan bandara dan antar kota dengan armada nyaman
+        serta pengemudi berpengalaman.
     </p>
 </section>
 
-<!-- ARMADA -->
 <section id="armada" class="section gray">
     <h2>Jenis Layanan & Armada</h2>
 
     <div class="grid">
-        <div class="card">
-            <h3>Regular</h3>
-        </div>
-        <div class="card">
-            <h3>Regular Electric</h3>
-        </div>
-        <div class="card">
-            <h3>Regular Plus</h3>
-        </div>
-        <div class="card">
-            <h3>Comfort</h3>
-        </div>
-        <div class="card">
-            <h3>Comfort Electric</h3>
-        </div>
+        <div class="card"><h3>Regular</h3></div>
+        <div class="card"><h3>Regular Electric</h3></div>
+        <div class="card"><h3>Regular Plus</h3></div>
+        <div class="card"><h3>Comfort</h3></div>
+        <div class="card"><h3>Comfort Electric</h3></div>
     </div>
 </section>
 
-<!-- RUTE -->
 <section id="rute" class="section">
     <h2>Rute Populer</h2>
 
     <div class="route-grid">
-        <div class="route-card">
-            <h4>Bandara → Jakarta</h4>
-            <p>Regular • Plus • Comfort</p>
-        </div>
-        <div class="route-card">
-            <h4>Jakarta → Bandung</h4>
-            <p>Regular Plus • Comfort</p>
-        </div>
-        <div class="route-card">
-            <h4>Jakarta → Merak</h4>
-            <p>Comfort • Comfort Electric</p>
-        </div>
+        <div class="route-card"><h4>Bandara → Jakarta</h4></div>
+        <div class="route-card"><h4>Jakarta → Bandung</h4></div>
+        <div class="route-card"><h4>Jakarta → Merak</h4></div>
     </div>
 </section>
 
-<!-- BOOKING FORM -->
 <section id="booking" class="section gray">
     <h2>Form Booking</h2>
-    <p class="center">Isi data di bawah, kami akan hubungi via WhatsApp</p>
 
-    <form class="booking-form">
+    <form class="booking-form" id="bookingForm">
+
         <div class="form-group">
             <label>Nama</label>
-            <input type="text" placeholder="Nama lengkap" required>
+            <input type="text" id="name" required>
         </div>
 
         <div class="form-group">
             <label>No. WhatsApp</label>
-            <input type="tel" placeholder="08xxxxxxxxxx" required>
-        </div>
-
-        <div class="form-group">
-            <label>Tanggal Jemput</label>
-            <input type="date" required>
+            <input type="tel" id="phone" required>
         </div>
 
         <div class="form-group">
             <label>Lokasi Jemput</label>
-            <select required>
+            <select id="pickup" required>
                 <option value="">Pilih Lokasi</option>
                 <option>Tangerang Kota</option>
                 <option>Jakarta Utara</option>
@@ -129,7 +98,7 @@
 
         <div class="form-group">
             <label>Tujuan</label>
-            <select required>
+            <select id="destination" required>
                 <option value="">Pilih Tujuan</option>
                 <option>Tangerang Kota</option>
                 <option>Jakarta Utara</option>
@@ -146,9 +115,14 @@
             </select>
         </div>
 
+        <div class="form-group full">
+            <label>Alamat Detail Jemput</label>
+            <input type="text" id="address" placeholder="Nama jalan / patokan">
+        </div>
+
         <div class="form-group">
             <label>Jenis Armada</label>
-            <select required>
+            <select id="armada" required>
                 <option value="">Pilih Armada</option>
                 <option>Regular</option>
                 <option>Regular Electric</option>
@@ -160,60 +134,16 @@
 
         <div class="form-group full">
             <label>Catatan Tambahan</label>
-            <textarea rows="4" placeholder="Contoh: koper 3, jemput subuh"></textarea>
+            <textarea id="notes" placeholder="Contoh: koper 3, jemput subuh"></textarea>
         </div>
 
-        <button type="submit" class="btn full">Kirim Booking</button>
+        <button type="submit" class="btn full">Kirim via WhatsApp</button>
     </form>
-    <form class="booking-form" id="bookingForm">
-<input type="text" id="name" required>
-<input type="tel" id="phone" required>
-
-<select id="pickup" required>...</select>
-<select id="destination" required>...</select>
-
-<input type="text" id="address">
-
-<select id="armada" required>...</select>
-
-<textarea id="notes"></textarea>
-<script>
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const pickup = document.getElementById("pickup").value;
-    const destination = document.getElementById("destination").value;
-    const address = document.getElementById("address").value;
-    const armada = document.getElementById("armada").value;
-    const notes = document.getElementById("notes").value;
-
-    const message =
-`Halo AntarJemputAnda 👋
-
-Nama: ${name}
-No WA: ${phone}
-Lokasi Jemput: ${pickup}
-Alamat Detail: ${address}
-Tujuan: ${destination}
-Armada: ${armada}
-Catatan: ${notes}`;
-
-    const whatsappNumber = "628XXXXXXXXX"; // ← GANTI NOMOR INI
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank");
-});
-</script>
-
 </section>
 
-<!-- KONTAK -->
 <section id="kontak" class="section center">
-    <h2>Butuh Respon Cepat?</h2>
+    <h2>Butuh Bantuan Cepat?</h2>
     <p>Hubungi kami langsung via WhatsApp</p>
-    <a href="https://wa.me/628xxxxxxxxx" class="btn">Chat via WhatsApp</a>
 </section>
 
 </main>
@@ -221,6 +151,39 @@ Catatan: ${notes}`;
 <footer>
     © 2026 AntarJemputAnda
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/628112535678" class="wa-float" aria-label="Chat WhatsApp">💬</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const message =
+`Halo AntarJemputAnda 👋
+
+Nama: ${name.value}
+No. WA: ${phone.value}
+Jemput: ${pickup.value}
+Alamat: ${address.value}
+Tujuan: ${destination.value}
+Armada: ${armada.value}
+Catatan: ${notes.value}`;
+
+    window.open(
+        "https://wa.me/628112535678?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+});
+</script>
 
 </body>
 </html>
