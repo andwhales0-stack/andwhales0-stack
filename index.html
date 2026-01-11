@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AntarJemputAnda</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="hero">
-    <h1>AntarJemputAnda</h1>
-    <p>Layanan transportasi bandara & antar kota terpercaya</p>
-    <a class="btn" href="https://wa.me/628xxxxxxxxx" target="_blank">
-        Chat via WhatsApp
-    </a>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">AntarJemputAnda</div>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#armada">Armada</a>
+            <a href="#rute">Rute</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </div>
 </header>
 
-<section class="section">
+<!-- HERO -->
+<section class="hero">
+    <h1>Transportasi Bandara & Antar Kota</h1>
+    <p>Nyaman • Tepat Waktu • Profesional</p>
+    <a href="https://wa.me/628xxxxxxxxx" class="btn">Chat via WhatsApp</a>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="section">
     <h2>Tentang Kami</h2>
     <p>
-        AntarJemputAnda menyediakan layanan transportasi profesional untuk
-        perjalanan bandara, stasiun, dan antar kota di area Jabodetabek
-        dan sekitarnya dengan armada nyaman dan pengemudi berpengalaman.
+        AntarJemputAnda menyediakan layanan transportasi profesional
+        untuk perjalanan bandara, stasiun, dan antar kota di wilayah
+        Jabodetabek, Bandung, dan Merak dengan armada nyaman serta
+        pengemudi berpengalaman.
     </p>
 </section>
 
-<section class="section gray">
+<!-- ARMADA -->
+<section id="armada" class="section gray">
     <h2>Jenis Layanan & Armada</h2>
 
     <div class="grid">
@@ -52,50 +67,35 @@
     </div>
 </section>
 
-<section class="section">
-    <h2>Daftar Harga Antar Jemput</h2>
+<!-- RUTE -->
+<section id="rute" class="section">
+    <h2>Rute Populer</h2>
 
-    <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>Wilayah Tujuan</th>
-                    <th>Jarak</th>
-                    <th>Regular</th>
-                    <th>Regular Electric</th>
-                    <th>Regular Plus</th>
-                    <th>Comfort</th>
-                    <th>Comfort Electric</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Tangerang Kota</td><td>15 km</td><td>68k</td><td>77.5k</td><td>82k</td><td>127.5k</td><td>142.5k</td></tr>
-                <tr><td>Jakarta Utara</td><td>25 km</td><td>108k</td><td>122.5k</td><td>130k</td><td>202.5k</td><td>227.5k</td></tr>
-                <tr><td>Jakarta Pusat</td><td>32 km</td><td>136k</td><td>154k</td><td>163.6k</td><td>255k</td><td>287k</td></tr>
-                <tr><td>BSD City</td><td>35 km</td><td>148k</td><td>167.5k</td><td>178k</td><td>277.5k</td><td>312.5k</td></tr>
-                <tr><td>Jakarta Selatan</td><td>40 km</td><td>168k</td><td>190k</td><td>202k</td><td>315k</td><td>355k</td></tr>
-                <tr><td>Bekasi Kota</td><td>45 km</td><td>188k</td><td>212.5k</td><td>226k</td><td>352.5k</td><td>397.5k</td></tr>
-                <tr><td>Jakarta Timur</td><td>48 km</td><td>200k</td><td>226k</td><td>240.4k</td><td>375k</td><td>423k</td></tr>
-                <tr><td>Sentul</td><td>60 km</td><td>248k</td><td>280k</td><td>298k</td><td>465k</td><td>525k</td></tr>
-                <tr><td>Bogor Kota</td><td>65 km</td><td>268k</td><td>302.5k</td><td>322k</td><td>502.5k</td><td>567.5k</td></tr>
-                <tr><td>Svarna Bhumi</td><td>70 km</td><td>288k</td><td>325k</td><td>346k</td><td>540k</td><td>610k</td></tr>
-                <tr><td>Karawang</td><td>75 km</td><td>308k</td><td>347.5k</td><td>370k</td><td>577.5k</td><td>652.5k</td></tr>
-                <tr><td>Merak</td><td>105 km</td><td>428k</td><td>482.5k</td><td>514k</td><td>802.5k</td><td>907.5k</td></tr>
-            </tbody>
-        </table>
+    <div class="route-grid">
+        <div class="route-card">
+            <h4>Soekarno-Hatta → Jakarta</h4>
+            <p>Pilihan Armada: Regular • Plus • Comfort</p>
+        </div>
+        <div class="route-card">
+            <h4>Jakarta → Bandung</h4>
+            <p>Pilihan Armada: Regular Plus • Comfort</p>
+        </div>
+        <div class="route-card">
+            <h4>Jakarta → Merak</h4>
+            <p>Pilihan Armada: Comfort • Comfort Electric</p>
+        </div>
     </div>
 </section>
 
-<section class="section gray center">
+<!-- KONTAK -->
+<section id="kontak" class="section gray center">
     <h2>Hubungi Kami</h2>
-    <p>Siap berangkat tanpa ribet? Chat kami sekarang.</p>
-    <a class="btn" href="https://wa.me/628xxxxxxxxx" target="_blank">
-        Chat via WhatsApp
-    </a>
+    <p>Klik tombol di bawah untuk pemesanan cepat</p>
+    <a href="https://wa.me/628xxxxxxxxx" class="btn">Chat via WhatsApp</a>
 </section>
 
 <footer>
-    <p>© 2026 AntarJemputAnda</p>
+    © 2026 AntarJemputAnda
 </footer>
 
 </body>
